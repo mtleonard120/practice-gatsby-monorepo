@@ -1,9 +1,8 @@
 const axios = require("axios")
 
 const get = endpoint => axios.get(`https://pokeapi.co/api/v2${endpoint}`)
-const numberOfPokemon = 1000
 
-const getPokemonNames = async () => {
+const getPokemonNames = async numberOfPokemon => {
   const {
     data: { results },
   } = await get(`/pokemon?limit=${numberOfPokemon}`)
@@ -33,8 +32,8 @@ const getPokemonData = async names => {
   return results
 }
 
-const getAllPokemonData = async () => {
-  const names = await getPokemonNames()
+const getAllPokemonData = async numberOfPokemon => {
+  const names = await getPokemonNames(numberOfPokemon)
   const data = await getPokemonData(names)
 
   return data
@@ -42,7 +41,7 @@ const getAllPokemonData = async () => {
 
 exports.sourceNodes = async (
   { actions, cache, createNodeId, createContentDigest },
-  { cacheLengthInHours = 1 }
+  { cacheLengthInHours = 1, numberOfPokemon = 1000 }
 ) => {
   console.log("cache length in hours: ", cacheLengthInHours)
   const cacheLengthInMS = cacheLengthInHours * 60 * 60 * 1000
@@ -61,7 +60,7 @@ exports.sourceNodes = async (
   if (shouldUseCache) {
     data = await cache.get(`pokemonData`)
   } else {
-    data = await getAllPokemonData()
+    data = await getAllPokemonData(numberOfPokemon)
     await cache.set(`timestamp`, Date.now())
     await cache.set(`pokemonData`, data)
   }

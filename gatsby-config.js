@@ -31,6 +31,7 @@ module.exports = {
       resolve: `gatsby-source-pokeapi`,
       options: {
         cacheLengthInHours: 2,
+        numberOfPokemon: 20,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
