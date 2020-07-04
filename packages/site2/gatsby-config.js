@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-pokeapi`,
       options: {
-        cacheLengthInHours: 2,
+        cacheLengthInHours: 24,
         numberOfPokemon: 20,
       },
     },
