@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "practice-gatsby-monorepo",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Practice with gatsby and monorepo architecture.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michael Leonard <mtleonard120@gmail.com>",
   "dependencies": {
     "axios": "^0.19.2",
     "gatsby": "^2.23.12",
@@ -23,23 +23,12 @@
     "lerna": "3.22.1",
     "prettier": "2.0.5"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
   "scripts": {
     "build:site1": "npm --prefix packages/site1 run build",
     "build:site2": "npm --prefix packages/site2 run build",
     "site1": "cd packages/site1 && npm run develop",
     "site2": "cd packages/site2 && npm run develop",
     "all": "npm-run-all --parallel run:site1 run:site2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "workspaces": [
     "packages/*"
