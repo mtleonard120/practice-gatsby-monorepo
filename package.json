@@ -27,9 +27,16 @@
   "scripts": {
     "build:site1": "npm --prefix packages/site1 run build",
     "build:site2": "npm --prefix packages/site2 run build",
-    "site1": "cd packages/site1 && npm run develop",
-    "site2": "cd packages/site2 && npm run develop",
-    "all": "npm-run-all --parallel run:site1 run:site2"
+    "build:all": "npm-run-all build:site1 build:site2",
+    "clean:site1": "npm --prefix packages/site1 run clean",
+    "clean:site2": "npm --prefix packages/site2 run clean",
+    "clean:all": "npm-run-all --parallel clean:site1 clean:site2",
+    "serve:site1": "npm --prefix packages/site1 run serve",
+    "serve:site2": "npm --prefix packages/site2 run serve",
+    "serve:all": "npm-run-all --parallel serve:site1 serve:site2",
+    "site1": "npm --prefix packages/site1 run develop",
+    "site2": "npm --prefix packages/site2 run develop",
+    "all": "npm-run-all --parallel site1 site2"
   },
   "workspaces": [
     "packages/*"
