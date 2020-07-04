@@ -20,6 +20,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "lerna": "3.22.1",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -27,6 +28,8 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "build:site1": "npm --prefix packages/site1 run build",
+    "build:site2": "npm --prefix packages/site2 run build",
     "site1": "cd packages/site1 && npm run develop",
     "site2": "cd packages/site2 && npm run develop",
     "all": "npm-run-all --parallel run:site1 run:site2"
