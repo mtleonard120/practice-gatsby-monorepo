@@ -27,13 +27,9 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "site1": "cd packages/site1 && npm run develop",
+    "site2": "cd packages/site2 && npm run develop",
+    "all": "npm-run-all --parallel run:site1 run:site2"
   },
   "repository": {
     "type": "git",
