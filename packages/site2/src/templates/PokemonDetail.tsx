@@ -26,7 +26,7 @@ const PokemonDetail: React.FC<PageProps<IPokemonDetailData>> = ({
 
 export default PokemonDetail
 
-graphql`
+export const query = graphql`
   query($name: String!) {
     pokemon(name: { eq: $name }) {
       name

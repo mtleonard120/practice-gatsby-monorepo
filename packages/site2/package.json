@@ -1,7 +1,9 @@
 {
-  "name": "site2",
+  "name": "@practice-gatsby-monorepo/site2",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "@practice-gatsby-monorepo/shared": "0.1.0"
+  },
   "devDependencies": {
     "gatsby": "^2.23.12",
     "prettier": "2.0.5"

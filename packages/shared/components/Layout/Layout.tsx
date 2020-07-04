@@ -2,12 +2,12 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 // components
-import { Header } from "@practice-gatsby-monorepo/shared";
+import { Header } from "../Header";
 
 // styles
 import "./Layout.css";
 
-export const Layout: React.FC = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,3 +38,5 @@ export const Layout: React.FC = ({ children }) => {
     </>
   );
 };
+
+export default Layout;

@@ -18,7 +18,7 @@ export interface ISEOProps {
 }
 
 // primary component
-export const SEO: React.FC<ISEOProps> = ({
+const SEO: React.FC<ISEOProps> = ({
   description = "",
   lang = "",
   meta = [],
@@ -80,3 +80,5 @@ export const SEO: React.FC<ISEOProps> = ({
     />
   );
 };
+
+export default SEO;

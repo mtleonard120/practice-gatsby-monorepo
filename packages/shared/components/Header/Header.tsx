@@ -6,7 +6,7 @@ export interface IHeaderProps {
   siteTitle: string;
 }
 
-export const Header: React.FC<IHeaderProps> = ({ siteTitle = "" }) => (
+const Header: React.FC<IHeaderProps> = ({ siteTitle = "" }) => (
   <header
     style={{
       // background: `rebeccapurple`,
@@ -34,3 +34,5 @@ export const Header: React.FC<IHeaderProps> = ({ siteTitle = "" }) => (
     </div>
   </header>
 );
+
+export default Header;
