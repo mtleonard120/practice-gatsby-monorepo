@@ -1,4 +1,6 @@
 import React from "react"
+
+// packages
 import { graphql, PageProps } from "gatsby"
 
 // types
@@ -11,12 +13,10 @@ export interface IPokemonDetailData {
 
 // primary component
 const PokemonDetail: React.FC<PageProps<IPokemonDetailData>> = ({
-  path,
-  data,
-}) => {
-  const {
+  data: {
     pokemon: { name, weight },
-  } = data
+  },
+}) => {
   return (
     <div>
       I'm the detail page for {name}! This pokemon weighs {weight} pounds.
@@ -26,7 +26,7 @@ const PokemonDetail: React.FC<PageProps<IPokemonDetailData>> = ({
 
 export default PokemonDetail
 
-export const query = graphql`
+graphql`
   query($name: String!) {
     pokemon(name: { eq: $name }) {
       name

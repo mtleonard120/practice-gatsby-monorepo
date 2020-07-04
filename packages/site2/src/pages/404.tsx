@@ -1,9 +1,10 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+// components
+import { Layout, SEO } from "@practice-gatsby-monorepo/shared"
 
-const NotFoundPage = () => (
+// primary component
+const NotFoundPage: React.FC = () => (
   <Layout>
     <SEO title="404: Not found" />
     <h1>NOT FOUND</h1>
