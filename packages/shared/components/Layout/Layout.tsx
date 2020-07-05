@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Header } from "../Header";
 
 // styles
-import "./Layout.css";
+import "./Layout.scss";
 
 const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,11 +29,7 @@ const Layout: React.FC = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <footer></footer>
       </div>
     </>
   );
