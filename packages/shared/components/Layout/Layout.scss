@@ -1,3 +1,7 @@
+header {
+  background-color: $color-brand--primary;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8,10 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-header {
-  background: red;
-}
-
 article,
 aside,
 details,

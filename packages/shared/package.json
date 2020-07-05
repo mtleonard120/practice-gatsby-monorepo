@@ -1,4 +1,5 @@
 {
-  "name": "shared",
+  "name": "@practice-gatsby-monorepo/shared",
+  "private": "true",
   "version": "0.1.0"
 }

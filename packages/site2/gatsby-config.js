@@ -7,6 +7,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: '@import "styleguide.scss";',
+        includePaths: ["./src/styles", "../shared/scss"],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -30,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-source-pokeapi`,
       options: {
-        cacheLengthInHours: 2,
+        cacheLengthInHours: 24,
         numberOfPokemon: 20,
       },
     },

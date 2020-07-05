@@ -5,15 +5,18 @@
   "version": "0.1.0",
   "author": "Michael Leonard <mtleonard120@gmail.com>",
   "dependencies": {
+    "@types/react-helmet": "^6.0.0",
     "axios": "^0.19.2",
     "gatsby": "^2.23.12",
     "gatsby-image": "^2.4.9",
     "gatsby-plugin-manifest": "^2.4.14",
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
+    "gatsby-plugin-sass": "^2.3.10",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-source-filesystem": "^2.3.14",
     "gatsby-transformer-sharp": "^2.5.7",
+    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -26,9 +29,16 @@
   "scripts": {
     "build:site1": "npm --prefix packages/site1 run build",
     "build:site2": "npm --prefix packages/site2 run build",
-    "site1": "cd packages/site1 && npm run develop",
-    "site2": "cd packages/site2 && npm run develop",
-    "all": "npm-run-all --parallel run:site1 run:site2"
+    "build:all": "npm-run-all build:site1 build:site2",
+    "clean:site1": "npm --prefix packages/site1 run clean",
+    "clean:site2": "npm --prefix packages/site2 run clean",
+    "clean:all": "npm-run-all --parallel clean:site1 clean:site2",
+    "serve:site1": "npm --prefix packages/site1 run serve",
+    "serve:site2": "npm --prefix packages/site2 run serve",
+    "serve:all": "npm-run-all --parallel serve:site1 serve:site2",
+    "site1": "npm --prefix packages/site1 run develop",
+    "site2": "npm --prefix packages/site2 run develop",
+    "all": "npm-run-all --parallel site1 site2"
   },
   "workspaces": [
     "packages/*"

@@ -1,14 +1,16 @@
 {
-  "name": "site2",
+  "name": "@practice-gatsby-monorepo/site2",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "@practice-gatsby-monorepo/shared": "0.1.0"
+  },
   "devDependencies": {
     "gatsby": "^2.23.12",
     "prettier": "2.0.5"
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 8001",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

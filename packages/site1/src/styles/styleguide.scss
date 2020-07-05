@@ -1,0 +1,10 @@
+/* 
+  All variables, functions, and mixins imported here are globally
+  available in every scss file thanks to the gatsby-plugin-sass.
+
+  That plugin is configured to expose the contents of 
+  `packages/shared/scss` whose files can be freely imported here.
+*/
+
+@import "mixins"; // from the shared package
+@import "vars/index";
