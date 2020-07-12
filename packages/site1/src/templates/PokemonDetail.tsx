@@ -65,7 +65,7 @@ export const query = graphql`
       }
       sprite {
         childImageSharp {
-          fixed(width: 100) {
+          fixed(width: 96) {
             ...GatsbyImageSharpFixed
           }
         }
